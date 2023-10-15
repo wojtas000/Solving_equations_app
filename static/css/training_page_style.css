@@ -1,0 +1,78 @@
+.center-text {
+    text-align: center;
+}
+
+
+
+/* Styling for buttons */
+.start-button {
+    padding: 10px 20px;
+    background-color: #524eee; /* Blue color, you can change this */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.button:hover {
+    background-color: #524eee; /* Darker blue color on hover */
+}
+
+/* Styling for text */
+.body {
+    font-family: Arial, sans-serif; /* Use your preferred font-family */
+}
+
+.h1 {
+    font-size: 52px;
+    color: #333; /* Heading text color */
+}
+
+#timer, #points, #difficulty {
+    font-size: 36px;
+    color: #555; /* Text color for timer, points, and math problems */
+    margin-bottom: 10px;
+}
+
+.math-container {
+    font-size: 64px;
+    color: #333; 
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Styling for input box */
+.input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px;
+}
+
+/* style.css */
+.red-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 3px solid red; 
+    border-radius: 5px;
+}
+
+
+/* Styling for "Check Answer" and "Retry" buttons */
+#checkButton, #retryButton {
+    padding: 10px 20px;
+    background-color: #524eee; /* Green color, you can change this */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#checkButton:hover, #retryButton:hover {
+    background-color: #524eee; /* Darker green color on hover */
+}

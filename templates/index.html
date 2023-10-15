@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- include css-->
+    <link rel="stylesheet" href="../static/css/main_page_style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+</head>
+
+<body>
+    <h1>Math Training App</h1>
+    
+    <section class="radio-section">
+        <div class="radio-list">
+            <h1>Choose level of difficulty:</h1>
+            <div class="radio-item"><input name="radio" id="easy" type="radio"><label for="easy">Easy</label></div>
+            <div class="radio-item"><input name="radio" id="medium" type="radio"><label for="medium">Medium</label></div>
+            <div class="radio-item"><input name="radio" id="hard" type="radio"><label for="hard">Hard</label></div>
+        </div>
+    </section>
+
+    <div class="vertical-center">
+        <button class="start-button" id="mainButton">
+            Start Training
+        </button>
+    </div>
+    
+    <script>
+        var difficulty = 'medium'; 
+
+        document.getElementById('easy').addEventListener('change', function() {
+            difficulty = 'easy';
+        });
+
+        document.getElementById('medium').addEventListener('change', function() {
+            difficulty = 'medium';
+        });
+
+        document.getElementById('hard').addEventListener('change', function() {
+            difficulty = 'hard';
+        });
+
+        document.getElementById('mainButton').addEventListener('click', function() {
+            // Construct the URL with the selected difficulty
+            var url = '/training/' + difficulty + '/';
+            window.location.href = url; // Navigate to the training page
+        });
+    </script>
+
+</body>
+</html>

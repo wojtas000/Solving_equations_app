@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- include javascript-->
+    <script type=module src="/static/js/functions/utilityFunctions.js"></script>
+    <script type=module src="/static/js/eventListeners/buttonClickHandlers.js"></script>
+
+    <!-- include css-->
+    <link rel="stylesheet" href="/static/css/training_page_style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Page</title>
+</head>
+
+<body>
+    <h1 class="h1">Training page</h1>
+    <p id="difficulty"> Difficulty: {{ difficulty }}</p>
+    
+    <!-- Start Button -->
+    <button class="start-button" id="startButton">Start Training</button>
+    <button class="start-button" id="retryButton" style="display: none">Retry</button>
+    
+    <!-- Timer and point counter -->
+    <div id="timer">Time: 0s</div>
+    <div id="points">Points: 0</div>
+    
+    <!-- Math Equations Container -->
+    <div class="math-container" id="math-container"></div>
+    
+    <!-- Input Box -->
+    <div>
+        <input class="input" type="number" id="answerInput" placeholder="Your Answer">
+        <button id="checkButton">Check Answer</button>
+    </div>
+
+    <audio id="correctSound" >
+        <source src="/static/audio/rightanswer.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="wrongSound" >
+        <source src="/static/audio/wronganswer.mp3" type="audio/mpeg">
+    </audio>
+    
+
+    <script>
+        // Event listener for the start button
+        document.getElementById('startButton').addEventListener('click', startTraining);
+    </script>
+
+</body>
+</html>
